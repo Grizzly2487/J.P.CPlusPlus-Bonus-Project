@@ -2,17 +2,18 @@
 
 class Game
 {
-
 private:
+	int choice;
 
 
 public:
 
-	Game printWords(string);
+	int menu(int choice);
+	int quit();
 
 protected:
 
 
 
-};
 
+};

@@ -1,27 +1,23 @@
-#include "Game.h"
 #include <iostream>
-#include <string>
-#include <vector>
-#include <algorithm>
-#include <ctime>
-#include <cctype>
-
-/*
-Class called GAME
-Game controls all game functions like randomizing words
-Using those functions will look like
-Game gameClassObject;
-gameClassObject.functionName(parameters);
-*/
+#include "Game.h"
+#include "Bomb.h"
+#include "Clues.h"
+#include "Map.h"
+#include "Player.h"
 
 using namespace std;
-
+int menu(int choice);
 int main()
 {
 	cout << endl << endl;
-	cout << "\t\tS.W.A.T.(Bomb Squad)" << endl << endl;
-	cout << "\tWelcome to S.W.A.T.(Bomb Squad)." << endl;
-	cout << "\tTake control of the Bomb Squad Engineer." << endl;
-	cout << "\tEnter the building and search for clues." << endl;
-	return 0;
-}Game printWords(string)
+	cout << "\t\tS.W.A.T.(Bomb Squad)\n\n";
+	cout << "\tWelcome to S.W.A.T.(Bomb Squad).\n";
+	cout << "\tTake control of the Bomb Squad Engineer.\n";
+	cout << "\tEnter the building and search for clues.\n";
+	cout << "\n";
+	cout << "You arrive at the front doors to the building, the building has been evacuated.\n";
+	cout << "The chief sais the bomb is a dirty nuke and will destroy the city if you dont disarm it fast\n";
+	cout << "what would you like to do first?\n\n";
+	int menu(int choice);
+
+}
