@@ -1,19 +1,17 @@
 #pragma once
+class Map;
 
 class Game
 {
-private:
-	int choice;
-
-
 public:
-
-	int menu(int choice);
-	int quit();
-
-protected:
-
-
-
-
+	int play();
+	void bombCode();
+	void code();
+	void bombLocation();
+private:
+	const int MAX_TURNS = 14;
+	int turnsTaken = 0;
+	int choice;
+	bool bombFuse = false;
+	static const int NUM_NUMBERS = 10;
 };
