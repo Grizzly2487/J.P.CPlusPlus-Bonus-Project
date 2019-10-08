@@ -1,4 +1,3 @@
-#include "Map.h"
 #include <algorithm>
 #include <ctime>
 #include <cctype>
@@ -7,40 +6,40 @@
 #include <iostream>
 #include <string>
 #include "Game.h"
+#include "Map.h"
 
 
 using namespace std;
 
 int Game::play()
 {
+
 	do
 	{
 		do
 		{
+			cout << "what would you like to do?\n\n";
 			int choice;
-			cout << "1 - look\n";
-			cout << "2 - take\n";
-			cout << "3 - use\n";
-			cout << "4 - move\n";
-			cout << "5 - abort mission\n\n";
+			cout << "1 - Look\n";
+			cout << "2 - Inventory Search\n";
+			cout << "3 - Move\n";
+			cout << "4 - Abort Mission\n\n";
 
 			cin >> choice;
 
 			switch (choice)
 			{
 			case 1:
-				Map look();
-				++turnsTaken;
+				myMap.Look();
 				break;
 			case 2:
-
-			case 3:
-
-			case 4:
-				cout << "where would you like to move to? \n\n";
-				Map Move();
+				inventory.inventorySearch();
 				break;
-			case 5:
+			case 3:
+				cout << "where would you like to move to? \n\n";
+				myMap.Move();
+				break;
+			case 4:
 				system("CLS");
 				cout << "The Bomb Blows Up...we're all dead Jim....GAME OVER!\n";
 				cout << " \n";
@@ -64,50 +63,10 @@ int Game::play()
 				return 0;
 			default:
 				cout << "This is not a valid option, your on the clock! hurry up and choose 1 - 5\n\n";
-				++turnsTaken;
-
 			}
-		} while (choice != 1 && choice != 2 && choice != 3 && choice != 4 && choice != 5);
-	} while (turnsTaken != 14 && bombFuse != true);
+		} while (choice != 1 && choice != 2 && choice != 3);
+	} while (myMap.turnsTaken != 14);
 	return 0;
 }
 
-void Game::bombLocation()
-{
-	//for (int i = 0; i < 5; ++i)
-	//{
-		//srand(static_cast<unsigned int>(time(0)));
-		//rand()
-	//}
-
-};
-
-void Game::bombCode()
-{
-	code();
-};
-void Game::code()
-{
-	vector<string> possibleNumbers;
-	possibleNumbers.push_back("0");
-	possibleNumbers.push_back("1");
-	possibleNumbers.push_back("2");
-	possibleNumbers.push_back("3");
-	possibleNumbers.push_back("4");
-	possibleNumbers.push_back("5");
-	possibleNumbers.push_back("6");
-	possibleNumbers.push_back("7");
-	possibleNumbers.push_back("8");
-	possibleNumbers.push_back("9");
-
-	for (int i = 0; i < 4; ++i)
-	{
-		srand(static_cast<unsigned int>(time(0)));
-		random_shuffle(possibleNumbers.begin(), possibleNumbers.end());
-	}
-	const string firstClue = possibleNumbers[0];
-	const string secondClue = possibleNumbers[1];
-	const string thirdClue = possibleNumbers[2];
-	const string fourthClue = possibleNumbers[3];
-}
 

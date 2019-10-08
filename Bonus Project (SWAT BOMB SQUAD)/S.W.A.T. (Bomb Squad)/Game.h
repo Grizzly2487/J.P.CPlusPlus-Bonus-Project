@@ -1,17 +1,16 @@
 #pragma once
-class Map;
+#include "Map.h"
+#include "Player.h"
+class Player;
 
 class Game
 {
 public:
 	int play();
-	void bombCode();
-	void code();
-	void bombLocation();
+	Player inventory;
+	Map myMap;
 private:
 	const int MAX_TURNS = 14;
-	int turnsTaken = 0;
 	int choice;
-	bool bombFuse = false;
 	static const int NUM_NUMBERS = 10;
 };

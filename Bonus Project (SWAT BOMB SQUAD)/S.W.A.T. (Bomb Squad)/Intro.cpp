@@ -13,5 +13,4 @@ void Intro::introduction()
 	cout << "\n";
 	cout << "You arrive at the front doors to the building, the building has been evacuated.\n";
 	cout << "The chief sais the bomb is a dirty nuke and will destroy the city if you dont disarm it fast\n";
-	cout << "what would you like to do first?\n\n";
 }
