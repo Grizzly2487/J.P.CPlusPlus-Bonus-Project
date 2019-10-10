@@ -12,5 +12,6 @@ void Intro::introduction()
 	cout << "\tEnter the building and search for clues.\n";
 	cout << "\n";
 	cout << "You arrive at the front doors to the building, the building has been evacuated.\n";
-	cout << "The chief sais the bomb is a dirty nuke and will destroy the city if you dont disarm it fast\n";
+	cout << "The chief sais the bomb is a dirty nuke and will destroy the city if you dont disarm it fast.\n";
+	cout << "You head to the front of the building fast, where you enter the Front Hall.\n";
 }

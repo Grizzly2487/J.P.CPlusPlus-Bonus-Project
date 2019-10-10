@@ -16,8 +16,6 @@ int Game::play()
 
 	do
 	{
-		do
-		{
 			cout << "what would you like to do?\n\n";
 			int choice;
 			cout << "1 - Look\n";
@@ -30,12 +28,19 @@ int Game::play()
 			switch (choice)
 			{
 			case 1:
+				system("CLS");
+				cout << "\n\n\n";
 				myMap.Look();
 				break;
 			case 2:
+				system("CLS");
+				cout << "\n\n\n";
 				inventory.inventorySearch();
+				cout << "\n";
 				break;
 			case 3:
+				system("CLS");
+				cout << "\n\n\n";
 				cout << "where would you like to move to? \n\n";
 				myMap.Move();
 				break;
@@ -64,8 +69,27 @@ int Game::play()
 			default:
 				cout << "This is not a valid option, your on the clock! hurry up and choose 1 - 5\n\n";
 			}
-		} while (choice != 1 && choice != 2 && choice != 3);
 	} while (myMap.turnsTaken != 14);
+	system("CLS");
+	cout << "The Bomb Blows Up...we're all dead Jim....GAME OVER!\n";
+	cout << " \n";
+	cout << " \n";
+	cout << "\tThank you for playing!\n\n";
+	cout << "\tLook at my WISE WIZARD MUAHAHAHA\n\n";
+	cout << "\t\t        /|     \n";
+	cout << "\t\t       / \\    \n";
+	cout << "\t\t      /   \\   \n";
+	cout << "\t\t \\____\____/____|\n";
+	cout << "\t\t   {|<*> <*>|} \n";
+	cout << "\t\t    |  (-)  |   (&)\n";
+	cout << "\t\t    /\\__1__/|   //\n";
+	cout << "\t\t   | '8-8-8' | //\n";
+	cout << "\t\t   |  '8-8'  | / \n";
+	cout << "\t\t   |   '8'   | \n";
+	cout << "\t\t   |    ?    | \n";
+	cout << "\n";
+	cout << "\n";
+	cout << "\n";
 	return 0;
 }
 
