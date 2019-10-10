@@ -1,75 +1,29 @@
-﻿  Map.cpp
-C:\Users\jonat\OneDrive\Documents\GitHub\J.P.CPlusPlus-Bonus-Project\Bonus Project (SWAT BOMB SQUAD)\S.W.A.T. (Bomb Squad)\Map.cpp(125,15): warning C4553: '==': result of expression not used; did you intend '='?
-C:\Users\jonat\OneDrive\Documents\GitHub\J.P.CPlusPlus-Bonus-Project\Bonus Project (SWAT BOMB SQUAD)\S.W.A.T. (Bomb Squad)\Map.cpp(129,12): warning C4553: '==': result of expression not used; did you intend '='?
-C:\Users\jonat\OneDrive\Documents\GitHub\J.P.CPlusPlus-Bonus-Project\Bonus Project (SWAT BOMB SQUAD)\S.W.A.T. (Bomb Squad)\Map.cpp(133,12): warning C4553: '==': result of expression not used; did you intend '='?
-C:\Users\jonat\OneDrive\Documents\GitHub\J.P.CPlusPlus-Bonus-Project\Bonus Project (SWAT BOMB SQUAD)\S.W.A.T. (Bomb Squad)\Map.cpp(137,12): warning C4553: '==': result of expression not used; did you intend '='?
-C:\Users\jonat\OneDrive\Documents\GitHub\J.P.CPlusPlus-Bonus-Project\Bonus Project (SWAT BOMB SQUAD)\S.W.A.T. (Bomb Squad)\Map.cpp(141,12): warning C4553: '==': result of expression not used; did you intend '='?
-C:\Users\jonat\OneDrive\Documents\GitHub\J.P.CPlusPlus-Bonus-Project\Bonus Project (SWAT BOMB SQUAD)\S.W.A.T. (Bomb Squad)\Map.cpp(145,12): warning C4553: '==': result of expression not used; did you intend '='?
-C:\Users\jonat\OneDrive\Documents\GitHub\J.P.CPlusPlus-Bonus-Project\Bonus Project (SWAT BOMB SQUAD)\S.W.A.T. (Bomb Squad)\Map.cpp(149,12): warning C4553: '==': result of expression not used; did you intend '='?
-C:\Users\jonat\OneDrive\Documents\GitHub\J.P.CPlusPlus-Bonus-Project\Bonus Project (SWAT BOMB SQUAD)\S.W.A.T. (Bomb Squad)\Map.cpp(153,12): warning C4553: '==': result of expression not used; did you intend '='?
-C:\Users\jonat\OneDrive\Documents\GitHub\J.P.CPlusPlus-Bonus-Project\Bonus Project (SWAT BOMB SQUAD)\S.W.A.T. (Bomb Squad)\Map.cpp(157,12): warning C4553: '==': result of expression not used; did you intend '='?
-C:\Users\jonat\OneDrive\Documents\GitHub\J.P.CPlusPlus-Bonus-Project\Bonus Project (SWAT BOMB SQUAD)\S.W.A.T. (Bomb Squad)\Map.cpp(161,12): warning C4553: '==': result of expression not used; did you intend '='?
-C:\Users\jonat\OneDrive\Documents\GitHub\J.P.CPlusPlus-Bonus-Project\Bonus Project (SWAT BOMB SQUAD)\S.W.A.T. (Bomb Squad)\Map.cpp(165,12): warning C4553: '==': result of expression not used; did you intend '='?
-C:\Users\jonat\OneDrive\Documents\GitHub\J.P.CPlusPlus-Bonus-Project\Bonus Project (SWAT BOMB SQUAD)\S.W.A.T. (Bomb Squad)\Map.cpp(169,12): warning C4553: '==': result of expression not used; did you intend '='?
-C:\Users\jonat\OneDrive\Documents\GitHub\J.P.CPlusPlus-Bonus-Project\Bonus Project (SWAT BOMB SQUAD)\S.W.A.T. (Bomb Squad)\Map.cpp(173,12): warning C4553: '==': result of expression not used; did you intend '='?
-C:\Users\jonat\OneDrive\Documents\GitHub\J.P.CPlusPlus-Bonus-Project\Bonus Project (SWAT BOMB SQUAD)\S.W.A.T. (Bomb Squad)\Map.cpp(175,20): warning C4553: '==': result of expression not used; did you intend '='?
-C:\Users\jonat\OneDrive\Documents\GitHub\J.P.CPlusPlus-Bonus-Project\Bonus Project (SWAT BOMB SQUAD)\S.W.A.T. (Bomb Squad)\Map.cpp(177,21): warning C4553: '==': result of expression not used; did you intend '='?
-C:\Users\jonat\OneDrive\Documents\GitHub\J.P.CPlusPlus-Bonus-Project\Bonus Project (SWAT BOMB SQUAD)\S.W.A.T. (Bomb Squad)\Map.cpp(179,20): warning C4553: '==': result of expression not used; did you intend '='?
-C:\Users\jonat\OneDrive\Documents\GitHub\J.P.CPlusPlus-Bonus-Project\Bonus Project (SWAT BOMB SQUAD)\S.W.A.T. (Bomb Squad)\Map.cpp(181,21): warning C4553: '==': result of expression not used; did you intend '='?
-C:\Users\jonat\OneDrive\Documents\GitHub\J.P.CPlusPlus-Bonus-Project\Bonus Project (SWAT BOMB SQUAD)\S.W.A.T. (Bomb Squad)\Map.cpp(324,19): warning C4553: '==': result of expression not used; did you intend '='?
-C:\Users\jonat\OneDrive\Documents\GitHub\J.P.CPlusPlus-Bonus-Project\Bonus Project (SWAT BOMB SQUAD)\S.W.A.T. (Bomb Squad)\Map.cpp(335,20): warning C4553: '==': result of expression not used; did you intend '='?
-C:\Users\jonat\OneDrive\Documents\GitHub\J.P.CPlusPlus-Bonus-Project\Bonus Project (SWAT BOMB SQUAD)\S.W.A.T. (Bomb Squad)\Map.cpp(346,21): warning C4553: '==': result of expression not used; did you intend '='?
-C:\Users\jonat\OneDrive\Documents\GitHub\J.P.CPlusPlus-Bonus-Project\Bonus Project (SWAT BOMB SQUAD)\S.W.A.T. (Bomb Squad)\Map.cpp(357,22): warning C4553: '==': result of expression not used; did you intend '='?
-C:\Users\jonat\OneDrive\Documents\GitHub\J.P.CPlusPlus-Bonus-Project\Bonus Project (SWAT BOMB SQUAD)\S.W.A.T. (Bomb Squad)\Map.cpp(373,19): warning C4129: '_': unrecognized character escape sequence
-C:\Users\jonat\OneDrive\Documents\GitHub\J.P.CPlusPlus-Bonus-Project\Bonus Project (SWAT BOMB SQUAD)\S.W.A.T. (Bomb Squad)\Map.cpp(400,20): warning C4129: '_': unrecognized character escape sequence
-C:\Users\jonat\OneDrive\Documents\GitHub\J.P.CPlusPlus-Bonus-Project\Bonus Project (SWAT BOMB SQUAD)\S.W.A.T. (Bomb Squad)\Map.cpp(429,19): warning C4129: '_': unrecognized character escape sequence
-C:\Users\jonat\OneDrive\Documents\GitHub\J.P.CPlusPlus-Bonus-Project\Bonus Project (SWAT BOMB SQUAD)\S.W.A.T. (Bomb Squad)\Map.cpp(458,18): warning C4129: '_': unrecognized character escape sequence
-C:\Users\jonat\OneDrive\Documents\GitHub\J.P.CPlusPlus-Bonus-Project\Bonus Project (SWAT BOMB SQUAD)\S.W.A.T. (Bomb Squad)\Map.cpp(487,17): warning C4129: '_': unrecognized character escape sequence
-C:\Users\jonat\OneDrive\Documents\GitHub\J.P.CPlusPlus-Bonus-Project\Bonus Project (SWAT BOMB SQUAD)\S.W.A.T. (Bomb Squad)\Map.cpp(553,18): warning C4553: '==': result of expression not used; did you intend '='?
-C:\Users\jonat\OneDrive\Documents\GitHub\J.P.CPlusPlus-Bonus-Project\Bonus Project (SWAT BOMB SQUAD)\S.W.A.T. (Bomb Squad)\Map.cpp(564,19): warning C4553: '==': result of expression not used; did you intend '='?
-C:\Users\jonat\OneDrive\Documents\GitHub\J.P.CPlusPlus-Bonus-Project\Bonus Project (SWAT BOMB SQUAD)\S.W.A.T. (Bomb Squad)\Map.cpp(575,20): warning C4553: '==': result of expression not used; did you intend '='?
-C:\Users\jonat\OneDrive\Documents\GitHub\J.P.CPlusPlus-Bonus-Project\Bonus Project (SWAT BOMB SQUAD)\S.W.A.T. (Bomb Squad)\Map.cpp(586,21): warning C4553: '==': result of expression not used; did you intend '='?
-C:\Users\jonat\OneDrive\Documents\GitHub\J.P.CPlusPlus-Bonus-Project\Bonus Project (SWAT BOMB SQUAD)\S.W.A.T. (Bomb Squad)\Map.cpp(602,18): warning C4129: '_': unrecognized character escape sequence
-C:\Users\jonat\OneDrive\Documents\GitHub\J.P.CPlusPlus-Bonus-Project\Bonus Project (SWAT BOMB SQUAD)\S.W.A.T. (Bomb Squad)\Map.cpp(629,19): warning C4129: '_': unrecognized character escape sequence
-C:\Users\jonat\OneDrive\Documents\GitHub\J.P.CPlusPlus-Bonus-Project\Bonus Project (SWAT BOMB SQUAD)\S.W.A.T. (Bomb Squad)\Map.cpp(658,18): warning C4129: '_': unrecognized character escape sequence
-C:\Users\jonat\OneDrive\Documents\GitHub\J.P.CPlusPlus-Bonus-Project\Bonus Project (SWAT BOMB SQUAD)\S.W.A.T. (Bomb Squad)\Map.cpp(687,17): warning C4129: '_': unrecognized character escape sequence
-C:\Users\jonat\OneDrive\Documents\GitHub\J.P.CPlusPlus-Bonus-Project\Bonus Project (SWAT BOMB SQUAD)\S.W.A.T. (Bomb Squad)\Map.cpp(716,16): warning C4129: '_': unrecognized character escape sequence
-C:\Users\jonat\OneDrive\Documents\GitHub\J.P.CPlusPlus-Bonus-Project\Bonus Project (SWAT BOMB SQUAD)\S.W.A.T. (Bomb Squad)\Map.cpp(782,18): warning C4553: '==': result of expression not used; did you intend '='?
-C:\Users\jonat\OneDrive\Documents\GitHub\J.P.CPlusPlus-Bonus-Project\Bonus Project (SWAT BOMB SQUAD)\S.W.A.T. (Bomb Squad)\Map.cpp(793,19): warning C4553: '==': result of expression not used; did you intend '='?
-C:\Users\jonat\OneDrive\Documents\GitHub\J.P.CPlusPlus-Bonus-Project\Bonus Project (SWAT BOMB SQUAD)\S.W.A.T. (Bomb Squad)\Map.cpp(804,20): warning C4553: '==': result of expression not used; did you intend '='?
-C:\Users\jonat\OneDrive\Documents\GitHub\J.P.CPlusPlus-Bonus-Project\Bonus Project (SWAT BOMB SQUAD)\S.W.A.T. (Bomb Squad)\Map.cpp(815,21): warning C4553: '==': result of expression not used; did you intend '='?
-C:\Users\jonat\OneDrive\Documents\GitHub\J.P.CPlusPlus-Bonus-Project\Bonus Project (SWAT BOMB SQUAD)\S.W.A.T. (Bomb Squad)\Map.cpp(831,18): warning C4129: '_': unrecognized character escape sequence
-C:\Users\jonat\OneDrive\Documents\GitHub\J.P.CPlusPlus-Bonus-Project\Bonus Project (SWAT BOMB SQUAD)\S.W.A.T. (Bomb Squad)\Map.cpp(858,19): warning C4129: '_': unrecognized character escape sequence
-C:\Users\jonat\OneDrive\Documents\GitHub\J.P.CPlusPlus-Bonus-Project\Bonus Project (SWAT BOMB SQUAD)\S.W.A.T. (Bomb Squad)\Map.cpp(887,18): warning C4129: '_': unrecognized character escape sequence
-C:\Users\jonat\OneDrive\Documents\GitHub\J.P.CPlusPlus-Bonus-Project\Bonus Project (SWAT BOMB SQUAD)\S.W.A.T. (Bomb Squad)\Map.cpp(916,17): warning C4129: '_': unrecognized character escape sequence
-C:\Users\jonat\OneDrive\Documents\GitHub\J.P.CPlusPlus-Bonus-Project\Bonus Project (SWAT BOMB SQUAD)\S.W.A.T. (Bomb Squad)\Map.cpp(945,16): warning C4129: '_': unrecognized character escape sequence
-C:\Users\jonat\OneDrive\Documents\GitHub\J.P.CPlusPlus-Bonus-Project\Bonus Project (SWAT BOMB SQUAD)\S.W.A.T. (Bomb Squad)\Map.cpp(1011,18): warning C4553: '==': result of expression not used; did you intend '='?
-C:\Users\jonat\OneDrive\Documents\GitHub\J.P.CPlusPlus-Bonus-Project\Bonus Project (SWAT BOMB SQUAD)\S.W.A.T. (Bomb Squad)\Map.cpp(1022,19): warning C4553: '==': result of expression not used; did you intend '='?
-C:\Users\jonat\OneDrive\Documents\GitHub\J.P.CPlusPlus-Bonus-Project\Bonus Project (SWAT BOMB SQUAD)\S.W.A.T. (Bomb Squad)\Map.cpp(1033,20): warning C4553: '==': result of expression not used; did you intend '='?
-C:\Users\jonat\OneDrive\Documents\GitHub\J.P.CPlusPlus-Bonus-Project\Bonus Project (SWAT BOMB SQUAD)\S.W.A.T. (Bomb Squad)\Map.cpp(1044,21): warning C4553: '==': result of expression not used; did you intend '='?
-C:\Users\jonat\OneDrive\Documents\GitHub\J.P.CPlusPlus-Bonus-Project\Bonus Project (SWAT BOMB SQUAD)\S.W.A.T. (Bomb Squad)\Map.cpp(1060,18): warning C4129: '_': unrecognized character escape sequence
-C:\Users\jonat\OneDrive\Documents\GitHub\J.P.CPlusPlus-Bonus-Project\Bonus Project (SWAT BOMB SQUAD)\S.W.A.T. (Bomb Squad)\Map.cpp(1087,19): warning C4129: '_': unrecognized character escape sequence
-C:\Users\jonat\OneDrive\Documents\GitHub\J.P.CPlusPlus-Bonus-Project\Bonus Project (SWAT BOMB SQUAD)\S.W.A.T. (Bomb Squad)\Map.cpp(1116,18): warning C4129: '_': unrecognized character escape sequence
-C:\Users\jonat\OneDrive\Documents\GitHub\J.P.CPlusPlus-Bonus-Project\Bonus Project (SWAT BOMB SQUAD)\S.W.A.T. (Bomb Squad)\Map.cpp(1145,17): warning C4129: '_': unrecognized character escape sequence
-C:\Users\jonat\OneDrive\Documents\GitHub\J.P.CPlusPlus-Bonus-Project\Bonus Project (SWAT BOMB SQUAD)\S.W.A.T. (Bomb Squad)\Map.cpp(1174,16): warning C4129: '_': unrecognized character escape sequence
-C:\Users\jonat\OneDrive\Documents\GitHub\J.P.CPlusPlus-Bonus-Project\Bonus Project (SWAT BOMB SQUAD)\S.W.A.T. (Bomb Squad)\Map.cpp(1240,18): warning C4553: '==': result of expression not used; did you intend '='?
-C:\Users\jonat\OneDrive\Documents\GitHub\J.P.CPlusPlus-Bonus-Project\Bonus Project (SWAT BOMB SQUAD)\S.W.A.T. (Bomb Squad)\Map.cpp(1251,19): warning C4553: '==': result of expression not used; did you intend '='?
-C:\Users\jonat\OneDrive\Documents\GitHub\J.P.CPlusPlus-Bonus-Project\Bonus Project (SWAT BOMB SQUAD)\S.W.A.T. (Bomb Squad)\Map.cpp(1262,20): warning C4553: '==': result of expression not used; did you intend '='?
-C:\Users\jonat\OneDrive\Documents\GitHub\J.P.CPlusPlus-Bonus-Project\Bonus Project (SWAT BOMB SQUAD)\S.W.A.T. (Bomb Squad)\Map.cpp(1273,21): warning C4553: '==': result of expression not used; did you intend '='?
-C:\Users\jonat\OneDrive\Documents\GitHub\J.P.CPlusPlus-Bonus-Project\Bonus Project (SWAT BOMB SQUAD)\S.W.A.T. (Bomb Squad)\Map.cpp(1289,18): warning C4129: '_': unrecognized character escape sequence
-C:\Users\jonat\OneDrive\Documents\GitHub\J.P.CPlusPlus-Bonus-Project\Bonus Project (SWAT BOMB SQUAD)\S.W.A.T. (Bomb Squad)\Map.cpp(1316,19): warning C4129: '_': unrecognized character escape sequence
-C:\Users\jonat\OneDrive\Documents\GitHub\J.P.CPlusPlus-Bonus-Project\Bonus Project (SWAT BOMB SQUAD)\S.W.A.T. (Bomb Squad)\Map.cpp(1345,18): warning C4129: '_': unrecognized character escape sequence
-C:\Users\jonat\OneDrive\Documents\GitHub\J.P.CPlusPlus-Bonus-Project\Bonus Project (SWAT BOMB SQUAD)\S.W.A.T. (Bomb Squad)\Map.cpp(1374,17): warning C4129: '_': unrecognized character escape sequence
-C:\Users\jonat\OneDrive\Documents\GitHub\J.P.CPlusPlus-Bonus-Project\Bonus Project (SWAT BOMB SQUAD)\S.W.A.T. (Bomb Squad)\Map.cpp(1403,16): warning C4129: '_': unrecognized character escape sequence
-C:\Users\jonat\OneDrive\Documents\GitHub\J.P.CPlusPlus-Bonus-Project\Bonus Project (SWAT BOMB SQUAD)\S.W.A.T. (Bomb Squad)\Map.cpp(1469,18): warning C4553: '==': result of expression not used; did you intend '='?
-C:\Users\jonat\OneDrive\Documents\GitHub\J.P.CPlusPlus-Bonus-Project\Bonus Project (SWAT BOMB SQUAD)\S.W.A.T. (Bomb Squad)\Map.cpp(1480,19): warning C4553: '==': result of expression not used; did you intend '='?
-C:\Users\jonat\OneDrive\Documents\GitHub\J.P.CPlusPlus-Bonus-Project\Bonus Project (SWAT BOMB SQUAD)\S.W.A.T. (Bomb Squad)\Map.cpp(1491,20): warning C4553: '==': result of expression not used; did you intend '='?
-C:\Users\jonat\OneDrive\Documents\GitHub\J.P.CPlusPlus-Bonus-Project\Bonus Project (SWAT BOMB SQUAD)\S.W.A.T. (Bomb Squad)\Map.cpp(1502,21): warning C4553: '==': result of expression not used; did you intend '='?
-C:\Users\jonat\OneDrive\Documents\GitHub\J.P.CPlusPlus-Bonus-Project\Bonus Project (SWAT BOMB SQUAD)\S.W.A.T. (Bomb Squad)\Map.cpp(1518,18): warning C4129: '_': unrecognized character escape sequence
-C:\Users\jonat\OneDrive\Documents\GitHub\J.P.CPlusPlus-Bonus-Project\Bonus Project (SWAT BOMB SQUAD)\S.W.A.T. (Bomb Squad)\Map.cpp(1545,19): warning C4129: '_': unrecognized character escape sequence
-C:\Users\jonat\OneDrive\Documents\GitHub\J.P.CPlusPlus-Bonus-Project\Bonus Project (SWAT BOMB SQUAD)\S.W.A.T. (Bomb Squad)\Map.cpp(1574,18): warning C4129: '_': unrecognized character escape sequence
-C:\Users\jonat\OneDrive\Documents\GitHub\J.P.CPlusPlus-Bonus-Project\Bonus Project (SWAT BOMB SQUAD)\S.W.A.T. (Bomb Squad)\Map.cpp(1603,17): warning C4129: '_': unrecognized character escape sequence
-C:\Users\jonat\OneDrive\Documents\GitHub\J.P.CPlusPlus-Bonus-Project\Bonus Project (SWAT BOMB SQUAD)\S.W.A.T. (Bomb Squad)\Map.cpp(1632,16): warning C4129: '_': unrecognized character escape sequence
-C:\Users\jonat\OneDrive\Documents\GitHub\J.P.CPlusPlus-Bonus-Project\Bonus Project (SWAT BOMB SQUAD)\S.W.A.T. (Bomb Squad)\Map.cpp(1646,5): error C2181: illegal else without matching if
-C:\Users\jonat\OneDrive\Documents\GitHub\J.P.CPlusPlus-Bonus-Project\Bonus Project (SWAT BOMB SQUAD)\S.W.A.T. (Bomb Squad)\Map.cpp(1654,4): error C2059: syntax error: 'else'
-C:\Users\jonat\OneDrive\Documents\GitHub\J.P.CPlusPlus-Bonus-Project\Bonus Project (SWAT BOMB SQUAD)\S.W.A.T. (Bomb Squad)\Map.cpp(1655,4): error C2143: syntax error: missing ';' before '{'
+﻿  main.cpp
+  Map.cpp
+C:\Users\jonat\OneDrive\Documents\GitHub\J.P.CPlusPlus-Bonus-Project\Bonus Project (SWAT BOMB SQUAD)\S.W.A.T. (Bomb Squad)\Map.cpp(377,18): warning C4129: '_': unrecognized character escape sequence
+C:\Users\jonat\OneDrive\Documents\GitHub\J.P.CPlusPlus-Bonus-Project\Bonus Project (SWAT BOMB SQUAD)\S.W.A.T. (Bomb Squad)\Map.cpp(401,18): warning C4129: '_': unrecognized character escape sequence
+C:\Users\jonat\OneDrive\Documents\GitHub\J.P.CPlusPlus-Bonus-Project\Bonus Project (SWAT BOMB SQUAD)\S.W.A.T. (Bomb Squad)\Map.cpp(426,17): warning C4129: '_': unrecognized character escape sequence
+C:\Users\jonat\OneDrive\Documents\GitHub\J.P.CPlusPlus-Bonus-Project\Bonus Project (SWAT BOMB SQUAD)\S.W.A.T. (Bomb Squad)\Map.cpp(451,17): warning C4129: '_': unrecognized character escape sequence
+C:\Users\jonat\OneDrive\Documents\GitHub\J.P.CPlusPlus-Bonus-Project\Bonus Project (SWAT BOMB SQUAD)\S.W.A.T. (Bomb Squad)\Map.cpp(476,16): warning C4129: '_': unrecognized character escape sequence
+C:\Users\jonat\OneDrive\Documents\GitHub\J.P.CPlusPlus-Bonus-Project\Bonus Project (SWAT BOMB SQUAD)\S.W.A.T. (Bomb Squad)\Map.cpp(590,18): warning C4129: '_': unrecognized character escape sequence
+C:\Users\jonat\OneDrive\Documents\GitHub\J.P.CPlusPlus-Bonus-Project\Bonus Project (SWAT BOMB SQUAD)\S.W.A.T. (Bomb Squad)\Map.cpp(614,18): warning C4129: '_': unrecognized character escape sequence
+C:\Users\jonat\OneDrive\Documents\GitHub\J.P.CPlusPlus-Bonus-Project\Bonus Project (SWAT BOMB SQUAD)\S.W.A.T. (Bomb Squad)\Map.cpp(639,17): warning C4129: '_': unrecognized character escape sequence
+C:\Users\jonat\OneDrive\Documents\GitHub\J.P.CPlusPlus-Bonus-Project\Bonus Project (SWAT BOMB SQUAD)\S.W.A.T. (Bomb Squad)\Map.cpp(664,16): warning C4129: '_': unrecognized character escape sequence
+C:\Users\jonat\OneDrive\Documents\GitHub\J.P.CPlusPlus-Bonus-Project\Bonus Project (SWAT BOMB SQUAD)\S.W.A.T. (Bomb Squad)\Map.cpp(689,15): warning C4129: '_': unrecognized character escape sequence
+C:\Users\jonat\OneDrive\Documents\GitHub\J.P.CPlusPlus-Bonus-Project\Bonus Project (SWAT BOMB SQUAD)\S.W.A.T. (Bomb Squad)\Map.cpp(803,18): warning C4129: '_': unrecognized character escape sequence
+C:\Users\jonat\OneDrive\Documents\GitHub\J.P.CPlusPlus-Bonus-Project\Bonus Project (SWAT BOMB SQUAD)\S.W.A.T. (Bomb Squad)\Map.cpp(827,18): warning C4129: '_': unrecognized character escape sequence
+C:\Users\jonat\OneDrive\Documents\GitHub\J.P.CPlusPlus-Bonus-Project\Bonus Project (SWAT BOMB SQUAD)\S.W.A.T. (Bomb Squad)\Map.cpp(852,17): warning C4129: '_': unrecognized character escape sequence
+C:\Users\jonat\OneDrive\Documents\GitHub\J.P.CPlusPlus-Bonus-Project\Bonus Project (SWAT BOMB SQUAD)\S.W.A.T. (Bomb Squad)\Map.cpp(877,16): warning C4129: '_': unrecognized character escape sequence
+C:\Users\jonat\OneDrive\Documents\GitHub\J.P.CPlusPlus-Bonus-Project\Bonus Project (SWAT BOMB SQUAD)\S.W.A.T. (Bomb Squad)\Map.cpp(902,15): warning C4129: '_': unrecognized character escape sequence
+C:\Users\jonat\OneDrive\Documents\GitHub\J.P.CPlusPlus-Bonus-Project\Bonus Project (SWAT BOMB SQUAD)\S.W.A.T. (Bomb Squad)\Map.cpp(1016,18): warning C4129: '_': unrecognized character escape sequence
+C:\Users\jonat\OneDrive\Documents\GitHub\J.P.CPlusPlus-Bonus-Project\Bonus Project (SWAT BOMB SQUAD)\S.W.A.T. (Bomb Squad)\Map.cpp(1040,18): warning C4129: '_': unrecognized character escape sequence
+C:\Users\jonat\OneDrive\Documents\GitHub\J.P.CPlusPlus-Bonus-Project\Bonus Project (SWAT BOMB SQUAD)\S.W.A.T. (Bomb Squad)\Map.cpp(1065,17): warning C4129: '_': unrecognized character escape sequence
+C:\Users\jonat\OneDrive\Documents\GitHub\J.P.CPlusPlus-Bonus-Project\Bonus Project (SWAT BOMB SQUAD)\S.W.A.T. (Bomb Squad)\Map.cpp(1090,16): warning C4129: '_': unrecognized character escape sequence
+C:\Users\jonat\OneDrive\Documents\GitHub\J.P.CPlusPlus-Bonus-Project\Bonus Project (SWAT BOMB SQUAD)\S.W.A.T. (Bomb Squad)\Map.cpp(1115,15): warning C4129: '_': unrecognized character escape sequence
+C:\Users\jonat\OneDrive\Documents\GitHub\J.P.CPlusPlus-Bonus-Project\Bonus Project (SWAT BOMB SQUAD)\S.W.A.T. (Bomb Squad)\Map.cpp(1224,19): warning C4129: '_': unrecognized character escape sequence
+C:\Users\jonat\OneDrive\Documents\GitHub\J.P.CPlusPlus-Bonus-Project\Bonus Project (SWAT BOMB SQUAD)\S.W.A.T. (Bomb Squad)\Map.cpp(1248,19): warning C4129: '_': unrecognized character escape sequence
+C:\Users\jonat\OneDrive\Documents\GitHub\J.P.CPlusPlus-Bonus-Project\Bonus Project (SWAT BOMB SQUAD)\S.W.A.T. (Bomb Squad)\Map.cpp(1273,18): warning C4129: '_': unrecognized character escape sequence
+C:\Users\jonat\OneDrive\Documents\GitHub\J.P.CPlusPlus-Bonus-Project\Bonus Project (SWAT BOMB SQUAD)\S.W.A.T. (Bomb Squad)\Map.cpp(1298,17): warning C4129: '_': unrecognized character escape sequence
+  Generating Code...
+C:\Users\jonat\OneDrive\Documents\GitHub\J.P.CPlusPlus-Bonus-Project\Bonus Project (SWAT BOMB SQUAD)\S.W.A.T. (Bomb Squad)\Map.cpp(1323,16): warning C4129: '_': unrecognized character escape sequence
+  S.W.A.T. (Bomb Squad).vcxproj -> C:\Users\jonat\OneDrive\Documents\GitHub\J.P.CPlusPlus-Bonus-Project\Bonus Project (SWAT BOMB SQUAD)\S.W.A.T. (Bomb Squad)\Debug\S.W.A.T. (Bomb Squad).exe

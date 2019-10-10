@@ -5,12 +5,15 @@
 #include "Player.h"
 
 using namespace std;
+//create objects of classes to call functions
 Game bombSquad;
 Intro welcome;
-Game bomb;
 int main()
 {
+	//plays intro function
 	welcome.introduction();
+	//starts the game
 	bombSquad.play();
+	//ends the program
 	return 0;
 }

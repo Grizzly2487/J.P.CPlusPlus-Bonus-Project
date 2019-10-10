@@ -7,6 +7,7 @@
 #include "Map.h"
 #include "Player.h"
 using namespace std;
+//function to move around the building array of locations, increases the turns taken to increment the bomb time
 void Map::Move()
 {
 	location[0][0] = 1;
@@ -17,7 +18,6 @@ void Map::Move()
 	location[1][2] = 6;
 
 	currentLocation = 1;
-	cout << bombLocation << endl << endl;
 	cout << "Choose a location to move to by selecting a number:\n";
 	cout << " 1.Front Hall, 2.West Office, 3.East Office, 4.Manager's Office, 5.Storage Closet, 6.Security Office\n";
 	cin >> move;
@@ -75,7 +75,7 @@ void Map::Move()
 		}
 	} while (move != 1 && move != 2 && move != 3 && move != 4 && move != 5 && move != 6);
 }
-
+//function to look into the current location your in and see if there is a bomb or any clues in the room, and add the clue to the inventory or access the bomb to difuse it. not fully working
 void Map::Look()
 {
 	locationDescriptions[0][0] = "The Front Hall has been evacuated. Just Like the rest of the building\n";
@@ -86,6 +86,7 @@ void Map::Look()
 	locationDescriptions[1][2] = "The Security Office. Monitors for the cameras of the building can be seen.\n";
 
 	std::vector<int> possibleNumbers;
+	possibleNumbers.push_back(0);
 	possibleNumbers.push_back(1);
 	possibleNumbers.push_back(2);
 	possibleNumbers.push_back(3);
@@ -95,7 +96,6 @@ void Map::Look()
 	possibleNumbers.push_back(7);
 	possibleNumbers.push_back(8);
 	possibleNumbers.push_back(9);
-	possibleNumbers.push_back(10);
 
 	for (int i = 0; i < 4; ++i)
 	{
@@ -103,12 +103,10 @@ void Map::Look()
 		random_shuffle(possibleNumbers.begin(), possibleNumbers.end());
 	}
 
-	int firstClue = possibleNumbers[0];
-	int secondClue = possibleNumbers[1];
-	int thirdClue = possibleNumbers[2];
-	int fourthClue = possibleNumbers[3];
-
-	bombCode = firstClue, secondClue, thirdClue, fourthClue;
+	firstClue = possibleNumbers[0];
+	secondClue = possibleNumbers[1];
+	thirdClue = possibleNumbers[2];
+	fourthClue = possibleNumbers[3];
 
 	srand(static_cast<unsigned int>(time(0)));
 	int x1 = rand() % NUM_ROWS;
@@ -122,63 +120,63 @@ void Map::Look()
 	int x5 = rand() % NUM_ROWS;
 	int y5 = rand() % NUM_COLUMNS;
 
-	bombLocation == location[x1][y1];
+	bombLocation = location[x1][y1];
 
 	if (bombLocation == location[0][0])
 	{
-		hasBomb1 == true;
+		hasBomb1 = true;
 	}
 	else
 	{
-		hasBomb1 == false;
+		hasBomb1 = false;
 	}
 	if (bombLocation == location[0][1])
 	{
-		hasBomb2 == true;
+		hasBomb2 = true;
 	}
 	else
 	{
-		hasBomb2 == false;
+		hasBomb2 = false;
 	}
 	if (bombLocation == location[0][2])
 	{
-		hasBomb3 == true;
+		hasBomb3 = true;
 	}
 	else
 	{
-		hasBomb3 == false;
+		hasBomb3 = false;
 	}
 	if (bombLocation == location[1][0])
 	{
-		hasBomb4 == true;
+		hasBomb4 = true;
 	}
 	else
 	{
-		hasBomb4 == false;
+		hasBomb4 = false;
 	}
 	if (bombLocation == location[1][1])
 	{
-		hasBomb5 == true;
+		hasBomb5 = true;
 	}
 	else
 	{
-		hasBomb5 == false;
+		hasBomb5 = false;
 	}
-	if (bombLocation == location[1][2])
+	if (bombLocation = location[1][2])
 	{
-		hasBomb6 == true;
+		hasBomb6 = true;
 	}
 	else
 	{
-		hasBomb6 == false;
+		hasBomb6 = false;
 	}
-	firstClueLocation == location[x2][y2];
+	firstClueLocation = location[x2][y2];
 
-	secondClueLocation == location[x3][y3];
+	secondClueLocation = location[x3][y3];
 
-	thirdClueLocation == location[x4][y4];
+	thirdClueLocation = location[x4][y4];
 
-	fourthClueLocation == location[x5][y5];
+	fourthClueLocation = location[x5][y5];
 
 	if (location[x2][y2] == location[0][0])
 	{
@@ -285,23 +283,23 @@ void Map::Look()
 	if (currentLocation == 1)
 	{
 		cout << locationDescriptions[0][0];
-		if (hasClue1 == true)
+		if (hasClue1 = true)
 		{
 			cout << "You found the first of 4 clues!" << firstClue << endl;
 			inventory.playerInventory[0] = firstClue;
 		}
-		else if(hasClue2 == true)
+		else if(hasClue2 = true)
 		{
 			cout << "You found the second of 4 clues!" << secondClue << endl;
 			inventory.playerInventory[1] = secondClue;
 
 		}
-		else if(hasClue3 == true)
+		else if(hasClue3 = true)
 		{
 			cout << "You found the third of 4 clues!" << thirdClue << endl;
 			inventory.playerInventory[2] = thirdClue;
 		}
-		else if (hasClue4 == true)
+		else if (hasClue4 = true)
 		{
 			cout << "You found the fourth of 4 clues!" << fourthClue << endl;
 			inventory.playerInventory[3] = fourthClue;
@@ -310,142 +308,81 @@ void Map::Look()
 		{
 			cout << "There are no clues here...\n";
 		}
-		if (hasBomb1 = true)
+		if (hasBomb1 == true)
 		{
-				cout << "The Bomb Is In This Room!\n";
-				cout << "Would you like to enter the code? (Y/N)\n";
-				cin >> enter;
-				do
+			cout << "The Bomb Is In This Room!\n";
+			cout << "Would you like to enter the code? (Y/N)\n";
+			cin >> enter;
+			do
+			{
+				if (enter == 'Y' && enter != 'N')
 				{
-					if (enter == 'Y' && enter != 'N')
+					if (inventory.playerInventory[0] = firstClue)
 					{
-						if (inventory.playerInventory[0] = firstClue)
+						enterCode1 = firstClue;
+					}
+					else
+					{
+						cin >> enterCode1;
+					}
+						if (enterCode1 == firstClue)
 						{
-							enterCode1 == firstClue;
+						cout << "First code approved. Enter the next code. \n";
+						if (inventory.playerInventory[2] = secondClue)
+						{
+							enterCode2 = secondClue;
 						}
 						else
 						{
-							cin >> enterCode1;
+							cin >> enterCode2;
 						}
-						if (enterCode1 == firstClue)
+						if (enterCode2 == secondClue)
 						{
-							cout << "First code approved. Enter the next code. \n";
-							if (inventory.playerInventory[2] = secondClue)
+							cout << "Second code approved. Enter the next code. \n";
+							if (inventory.playerInventory[2] = thirdClue)
 							{
-								enterCode2 == secondClue;
+								enterCode3 = thirdClue;
 							}
 							else
 							{
-								cin >> enterCode2;
+								cin >> enterCode3;
 							}
-							if (enterCode2 == secondClue)
+							if (enterCode3 == thirdClue)
 							{
-								cout << "Second code approved. Enter the next code. \n";
-								if (inventory.playerInventory[2] = thirdClue)
+								cout << "Third code approved. Enter the next code. \n";
+								if (inventory.playerInventory[3] = fourthClue)
 								{
-									enterCode3 == thirdClue;
+									enterCode4 = fourthClue;
 								}
 								else
 								{
-									cin >> enterCode3;
+									cin >> enterCode4;
 								}
-								if (enterCode3 == thirdClue)
+								if (enterCode4 == fourthClue)
 								{
-									cout << "Third code approved. Enter the next code. \n";
-									if (inventory.playerInventory[3] = fourthClue)
-									{
-										enterCode4 == fourthClue;
-									}
-									else
-									{
-										cin >> enterCode4;
-									}
-									if (enterCode4 == fourthClue)
-									{
-										cout << "Bomb Defused. You Did It! Breathe it in, you saved the city!\n";
-										cout << " \n";
-										cout << " \n";
-										cout << "\tThank you for playing!\n\n";
-										cout << "\tLook at my WISE WIZARD MUAHAHAHA\n\n";
-										cout << "\t\t        /|     \n";
-										cout << "\t\t       / \\    \n";
-										cout << "\t\t      /   \\   \n";
-										cout << "\t\t \\____\____/____|\n";
-										cout << "\t\t   {|<*> <*>|} \n";
-										cout << "\t\t    |  (-)  |   (&)\n";
-										cout << "\t\t    /\\__1__/|   //\n";
-										cout << "\t\t   | '8-8-8' | //\n";
-										cout << "\t\t   |  '8-8'  | / \n";
-										cout << "\t\t   |   '8'   | \n";
-										cout << "\t\t   |    ?    | \n";
-										cout << "\n";
-										cout << "\n";
-										cout << "\n";
-									}
-									else
-									{
-										cout << "Wrong Code...\n";
-										bombFuse = true;
-										if (bombFuse == true)
-										{
-											system("CLS");
-											cout << "The Bomb Blows Up...we're all dead Jim....GAME OVER!\n";
-											cout << " \n";
-											cout << " \n";
-											cout << "\tThank you for playing!\n\n";
-											cout << "\tLook at my WISE WIZARD MUAHAHAHA\n\n";
-											cout << "\t\t        /|     \n";
-											cout << "\t\t       / \\    \n";
-											cout << "\t\t      /   \\   \n";
-											cout << "\t\t \\____\____/____|\n";
-											cout << "\t\t   {|<*> <*>|} \n";
-											cout << "\t\t    |  (-)  |   (&)\n";
-											cout << "\t\t    /\\__1__/|   //\n";
-											cout << "\t\t   | '8-8-8' | //\n";
-											cout << "\t\t   |  '8-8'  | / \n";
-											cout << "\t\t   |   '8'   | \n";
-											cout << "\t\t   |    ?    | \n";
-											cout << "\n";
-											cout << "\n";
-											cout << "\n";
-										}
-									}
+									cout << "Bomb Defused. You Did It! Breathe it in, you saved the city!\n";
+									cout << " \n";
+									cout << " \n";
+									cout << "\tThank you for playing!\n\n";
+									cout << "\tLook at my WISE WIZARD MUAHAHAHA\n\n";
+									cout << "\t\t        /|     \n";
+									cout << "\t\t       / \\    \n";
+									cout << "\t\t      /   \\   \n";
+									cout << "\t\t \\____\____/____|\n";
+									cout << "\t\t   {|<*> <*>|} \n";
+									cout << "\t\t    |  (-)  |   (&)\n";
+									cout << "\t\t    /\\__1__/|   //\n";
+									cout << "\t\t   | '8-8-8' | //\n";
+									cout << "\t\t   |  '8-8'  | / \n";
+									cout << "\t\t   |   '8'   | \n";
+									cout << "\t\t   |    ?    | \n";
+									cout << "\n";
+									cout << "\n";
+									cout << "\n";
 								}
 								else
 								{
 									cout << "Wrong Code...\n";
-									bombFuse = true;
-									if (bombFuse == true)
-									{
-										system("CLS");
-										cout << "The Bomb Blows Up...we're all dead Jim....GAME OVER!\n";
-										cout << " \n";
-										cout << " \n";
-										cout << "\tThank you for playing!\n\n";
-										cout << "\tLook at my WISE WIZARD MUAHAHAHA\n\n";
-										cout << "\t\t        /|     \n";
-										cout << "\t\t       / \\    \n";
-										cout << "\t\t      /   \\   \n";
-										cout << "\t\t \\____\____/____|\n";
-										cout << "\t\t   {|<*> <*>|} \n";
-										cout << "\t\t    |  (-)  |   (&)\n";
-										cout << "\t\t    /\\__1__/|   //\n";
-										cout << "\t\t   | '8-8-8' | //\n";
-										cout << "\t\t   |  '8-8'  | / \n";
-										cout << "\t\t   |   '8'   | \n";
-										cout << "\t\t   |    ?    | \n";
-										cout << "\n";
-										cout << "\n";
-										cout << "\n";
-									}
-								}
-							}
-							else
-							{
-								cout << "Wrong Code...\n";
-								bombFuse = true;
-								if (bombFuse == true)
-								{
 									system("CLS");
 									cout << "The Bomb Blows Up...we're all dead Jim....GAME OVER!\n";
 									cout << " \n";
@@ -468,13 +405,9 @@ void Map::Look()
 									cout << "\n";
 								}
 							}
-						}
-						else
-						{
-							cout << "Wrong Code...\n";
-							bombFuse = true;
-							if (bombFuse == true)
+							else
 							{
+								cout << "Wrong Code...\n";
 								system("CLS");
 								cout << "The Bomb Blows Up...we're all dead Jim....GAME OVER!\n";
 								cout << " \n";
@@ -496,6 +429,55 @@ void Map::Look()
 								cout << "\n";
 								cout << "\n";
 							}
+							}
+							else
+							{
+								cout << "Wrong Code...\n";
+								system("CLS");
+								cout << "The Bomb Blows Up...we're all dead Jim....GAME OVER!\n";
+								cout << " \n";
+								cout << " \n";
+								cout << "\tThank you for playing!\n\n";
+								cout << "\tLook at my WISE WIZARD MUAHAHAHA\n\n";
+								cout << "\t\t        /|     \n";
+								cout << "\t\t       / \\    \n";
+								cout << "\t\t      /   \\   \n";
+								cout << "\t\t \\____\____/____|\n";
+								cout << "\t\t   {|<*> <*>|} \n";
+								cout << "\t\t    |  (-)  |   (&)\n";
+								cout << "\t\t    /\\__1__/|   //\n";
+								cout << "\t\t   | '8-8-8' | //\n";
+								cout << "\t\t   |  '8-8'  | / \n";
+								cout << "\t\t   |   '8'   | \n";
+								cout << "\t\t   |    ?    | \n";
+								cout << "\n";
+								cout << "\n";
+								cout << "\n";
+							}
+						}
+						else
+						{
+							cout << "Wrong Code...\n";
+							system("CLS");
+							cout << "The Bomb Blows Up...we're all dead Jim....GAME OVER!\n";
+							cout << " \n";
+							cout << " \n";
+							cout << "\tThank you for playing!\n\n";
+							cout << "\tLook at my WISE WIZARD MUAHAHAHA\n\n";
+							cout << "\t\t        /|     \n";
+							cout << "\t\t       / \\    \n";
+							cout << "\t\t      /   \\   \n";
+							cout << "\t\t \\____\____/____|\n";
+							cout << "\t\t   {|<*> <*>|} \n";
+							cout << "\t\t    |  (-)  |   (&)\n";
+							cout << "\t\t    /\\__1__/|   //\n";
+							cout << "\t\t   | '8-8-8' | //\n";
+							cout << "\t\t   |  '8-8'  | / \n";
+							cout << "\t\t   |   '8'   | \n";
+							cout << "\t\t   |    ?    | \n";
+							cout << "\n";
+							cout << "\n";
+							cout << "\n";
 						}
 					}
 					else
@@ -539,7 +521,7 @@ void Map::Look()
 		{
 			cout << "There are no clues here...\n";
 		}
-		if (hasBomb2 == true)
+		if (hasBomb2 = true)
 		{
 			cout << "The Bomb Is In This Room!\n";
 			cout << "Would you like to enter the code? (Y/N)\n";
@@ -550,7 +532,7 @@ void Map::Look()
 				{
 					if (inventory.playerInventory[0] = firstClue)
 					{
-						enterCode1 == firstClue;
+						enterCode1 = firstClue;
 					}
 					else
 					{
@@ -561,7 +543,7 @@ void Map::Look()
 						cout << "First code approved. Enter the next code. \n";
 						if (inventory.playerInventory[2] = secondClue)
 						{
-							enterCode2 == secondClue;
+							enterCode2 = secondClue;
 						}
 						else
 						{
@@ -572,7 +554,7 @@ void Map::Look()
 							cout << "Second code approved. Enter the next code. \n";
 							if (inventory.playerInventory[2] = thirdClue)
 							{
-								enterCode3 == thirdClue;
+								enterCode3 = thirdClue;
 							}
 							else
 							{
@@ -583,7 +565,7 @@ void Map::Look()
 								cout << "Third code approved. Enter the next code. \n";
 								if (inventory.playerInventory[3] = fourthClue)
 								{
-									enterCode4 == fourthClue;
+									enterCode4 = fourthClue;
 								}
 								else
 								{
@@ -614,38 +596,6 @@ void Map::Look()
 								else
 								{
 									cout << "Wrong Code...\n";
-									bombFuse = true;
-									if (bombFuse == true)
-									{
-										system("CLS");
-										cout << "The Bomb Blows Up...we're all dead Jim....GAME OVER!\n";
-										cout << " \n";
-										cout << " \n";
-										cout << "\tThank you for playing!\n\n";
-										cout << "\tLook at my WISE WIZARD MUAHAHAHA\n\n";
-										cout << "\t\t        /|     \n";
-										cout << "\t\t       / \\    \n";
-										cout << "\t\t      /   \\   \n";
-										cout << "\t\t \\____\____/____|\n";
-										cout << "\t\t   {|<*> <*>|} \n";
-										cout << "\t\t    |  (-)  |   (&)\n";
-										cout << "\t\t    /\\__1__/|   //\n";
-										cout << "\t\t   | '8-8-8' | //\n";
-										cout << "\t\t   |  '8-8'  | / \n";
-										cout << "\t\t   |   '8'   | \n";
-										cout << "\t\t   |    ?    | \n";
-										cout << "\n";
-										cout << "\n";
-										cout << "\n";
-									}
-								}
-							}
-							else
-							{
-								cout << "Wrong Code...\n";
-								bombFuse = true;
-								if (bombFuse == true)
-								{
 									system("CLS");
 									cout << "The Bomb Blows Up...we're all dead Jim....GAME OVER!\n";
 									cout << " \n";
@@ -668,13 +618,9 @@ void Map::Look()
 									cout << "\n";
 								}
 							}
-						}
-						else
-						{
-							cout << "Wrong Code...\n";
-							bombFuse = true;
-							if (bombFuse == true)
+							else
 							{
+								cout << "Wrong Code...\n";
 								system("CLS");
 								cout << "The Bomb Blows Up...we're all dead Jim....GAME OVER!\n";
 								cout << " \n";
@@ -697,13 +643,9 @@ void Map::Look()
 								cout << "\n";
 							}
 						}
-					}
-					else
-					{
-						cout << "Wrong Code...\n";
-						bombFuse = true;
-						if (bombFuse == true)
+						else
 						{
+							cout << "Wrong Code...\n";
 							system("CLS");
 							cout << "The Bomb Blows Up...we're all dead Jim....GAME OVER!\n";
 							cout << " \n";
@@ -725,6 +667,30 @@ void Map::Look()
 							cout << "\n";
 							cout << "\n";
 						}
+					}
+					else
+					{
+						cout << "Wrong Code...\n";
+						system("CLS");
+						cout << "The Bomb Blows Up...we're all dead Jim....GAME OVER!\n";
+						cout << " \n";
+						cout << " \n";
+						cout << "\tThank you for playing!\n\n";
+						cout << "\tLook at my WISE WIZARD MUAHAHAHA\n\n";
+						cout << "\t\t        /|     \n";
+						cout << "\t\t       / \\    \n";
+						cout << "\t\t      /   \\   \n";
+						cout << "\t\t \\____\____/____|\n";
+						cout << "\t\t   {|<*> <*>|} \n";
+						cout << "\t\t    |  (-)  |   (&)\n";
+						cout << "\t\t    /\\__1__/|   //\n";
+						cout << "\t\t   | '8-8-8' | //\n";
+						cout << "\t\t   |  '8-8'  | / \n";
+						cout << "\t\t   |   '8'   | \n";
+						cout << "\t\t   |    ?    | \n";
+						cout << "\n";
+						cout << "\n";
+						cout << "\n";
 					}
 				}
 				else
@@ -768,7 +734,7 @@ void Map::Look()
 		{
 			cout << "There are no clues here...\n";
 		}
-		if (hasBomb3 == true)
+		if (hasBomb3 = true)
 		{
 			cout << "The Bomb Is In This Room!\n";
 			cout << "Would you like to enter the code? (Y/N)\n";
@@ -779,7 +745,7 @@ void Map::Look()
 				{
 					if (inventory.playerInventory[0] = firstClue)
 					{
-						enterCode1 == firstClue;
+						enterCode1 = firstClue;
 					}
 					else
 					{
@@ -790,7 +756,7 @@ void Map::Look()
 						cout << "First code approved. Enter the next code. \n";
 						if (inventory.playerInventory[2] = secondClue)
 						{
-							enterCode2 == secondClue;
+							enterCode2 = secondClue;
 						}
 						else
 						{
@@ -801,7 +767,7 @@ void Map::Look()
 							cout << "Second code approved. Enter the next code. \n";
 							if (inventory.playerInventory[2] = thirdClue)
 							{
-								enterCode3 == thirdClue;
+								enterCode3 = thirdClue;
 							}
 							else
 							{
@@ -812,7 +778,7 @@ void Map::Look()
 								cout << "Third code approved. Enter the next code. \n";
 								if (inventory.playerInventory[3] = fourthClue)
 								{
-									enterCode4 == fourthClue;
+									enterCode4 = fourthClue;
 								}
 								else
 								{
@@ -843,38 +809,6 @@ void Map::Look()
 								else
 								{
 									cout << "Wrong Code...\n";
-									bombFuse = true;
-									if (bombFuse == true)
-									{
-										system("CLS");
-										cout << "The Bomb Blows Up...we're all dead Jim....GAME OVER!\n";
-										cout << " \n";
-										cout << " \n";
-										cout << "\tThank you for playing!\n\n";
-										cout << "\tLook at my WISE WIZARD MUAHAHAHA\n\n";
-										cout << "\t\t        /|     \n";
-										cout << "\t\t       / \\    \n";
-										cout << "\t\t      /   \\   \n";
-										cout << "\t\t \\____\____/____|\n";
-										cout << "\t\t   {|<*> <*>|} \n";
-										cout << "\t\t    |  (-)  |   (&)\n";
-										cout << "\t\t    /\\__1__/|   //\n";
-										cout << "\t\t   | '8-8-8' | //\n";
-										cout << "\t\t   |  '8-8'  | / \n";
-										cout << "\t\t   |   '8'   | \n";
-										cout << "\t\t   |    ?    | \n";
-										cout << "\n";
-										cout << "\n";
-										cout << "\n";
-									}
-								}
-							}
-							else
-							{
-								cout << "Wrong Code...\n";
-								bombFuse = true;
-								if (bombFuse == true)
-								{
 									system("CLS");
 									cout << "The Bomb Blows Up...we're all dead Jim....GAME OVER!\n";
 									cout << " \n";
@@ -897,13 +831,9 @@ void Map::Look()
 									cout << "\n";
 								}
 							}
-						}
-						else
-						{
-							cout << "Wrong Code...\n";
-							bombFuse = true;
-							if (bombFuse == true)
+							else
 							{
+								cout << "Wrong Code...\n";
 								system("CLS");
 								cout << "The Bomb Blows Up...we're all dead Jim....GAME OVER!\n";
 								cout << " \n";
@@ -926,13 +856,9 @@ void Map::Look()
 								cout << "\n";
 							}
 						}
-					}
-					else
-					{
-						cout << "Wrong Code...\n";
-						bombFuse = true;
-						if (bombFuse == true)
+						else
 						{
+							cout << "Wrong Code...\n";
 							system("CLS");
 							cout << "The Bomb Blows Up...we're all dead Jim....GAME OVER!\n";
 							cout << " \n";
@@ -955,6 +881,30 @@ void Map::Look()
 							cout << "\n";
 						}
 					}
+					else
+					{
+						cout << "Wrong Code...\n";
+						system("CLS");
+						cout << "The Bomb Blows Up...we're all dead Jim....GAME OVER!\n";
+						cout << " \n";
+						cout << " \n";
+						cout << "\tThank you for playing!\n\n";
+						cout << "\tLook at my WISE WIZARD MUAHAHAHA\n\n";
+						cout << "\t\t        /|     \n";
+						cout << "\t\t       / \\    \n";
+						cout << "\t\t      /   \\   \n";
+						cout << "\t\t \\____\____/____|\n";
+						cout << "\t\t   {|<*> <*>|} \n";
+						cout << "\t\t    |  (-)  |   (&)\n";
+						cout << "\t\t    /\\__1__/|   //\n";
+						cout << "\t\t   | '8-8-8' | //\n";
+						cout << "\t\t   |  '8-8'  | / \n";
+						cout << "\t\t   |   '8'   | \n";
+						cout << "\t\t   |    ?    | \n";
+						cout << "\n";
+						cout << "\n";
+						cout << "\n";
+					}
 				}
 				else
 				{
@@ -966,239 +916,10 @@ void Map::Look()
 		}
 		else
 		{
-			++turnsTaken;
+		++turnsTaken;
 		}
 	}
 	else if (currentLocation == 4)
-	{
-		cout << locationDescriptions[1][0];
-		if (hasClue1 == true)
-		{
-			cout << "You found the first of 4 clues!" << firstClue << endl;
-			inventory.playerInventory[0] = firstClue;
-		}
-		else if (hasClue2 == true)
-		{
-			cout << "You found the second of 4 clues!" << secondClue << endl;
-			inventory.playerInventory[1] = secondClue;
-
-		}
-		else if (hasClue3 == true)
-		{
-			cout << "You found the third of 4 clues!" << thirdClue << endl;
-			inventory.playerInventory[2] = thirdClue;
-		}
-		else if (hasClue4 == true)
-		{
-			cout << "You found the fourth of 4 clues!" << fourthClue << endl;
-			inventory.playerInventory[3] = fourthClue;
-		}
-		else
-		{
-			cout << "There are no clues here...\n";
-		}
-		if (hasBomb4 == true)
-		{
-			cout << "The Bomb Is In This Room!\n";
-			cout << "Would you like to enter the code? (Y/N)\n";
-			cin >> enter;
-			do
-			{
-				if (enter == 'Y' && enter != 'N')
-				{
-					if (inventory.playerInventory[0] = firstClue)
-					{
-						enterCode1 == firstClue;
-					}
-					else
-					{
-						cin >> enterCode1;
-					}
-					if (enterCode1 == firstClue)
-					{
-						cout << "First code approved. Enter the next code. \n";
-						if (inventory.playerInventory[2] = secondClue)
-						{
-							enterCode2 == secondClue;
-						}
-						else
-						{
-							cin >> enterCode2;
-						}
-						if (enterCode2 == secondClue)
-						{
-							cout << "Second code approved. Enter the next code. \n";
-							if (inventory.playerInventory[2] = thirdClue)
-							{
-								enterCode3 == thirdClue;
-							}
-							else
-							{
-								cin >> enterCode3;
-							}
-							if (enterCode3 == thirdClue)
-							{
-								cout << "Third code approved. Enter the next code. \n";
-								if (inventory.playerInventory[3] = fourthClue)
-								{
-									enterCode4 == fourthClue;
-								}
-								else
-								{
-									cin >> enterCode4;
-								}
-								if (enterCode4 == fourthClue)
-								{
-									cout << "Bomb Defused. You Did It! Breathe it in, you saved the city!\n";
-									cout << " \n";
-									cout << " \n";
-									cout << "\tThank you for playing!\n\n";
-									cout << "\tLook at my WISE WIZARD MUAHAHAHA\n\n";
-									cout << "\t\t        /|     \n";
-									cout << "\t\t       / \\    \n";
-									cout << "\t\t      /   \\   \n";
-									cout << "\t\t \\____\____/____|\n";
-									cout << "\t\t   {|<*> <*>|} \n";
-									cout << "\t\t    |  (-)  |   (&)\n";
-									cout << "\t\t    /\\__1__/|   //\n";
-									cout << "\t\t   | '8-8-8' | //\n";
-									cout << "\t\t   |  '8-8'  | / \n";
-									cout << "\t\t   |   '8'   | \n";
-									cout << "\t\t   |    ?    | \n";
-									cout << "\n";
-									cout << "\n";
-									cout << "\n";
-								}
-								else
-								{
-									cout << "Wrong Code...\n";
-									bombFuse = true;
-									if (bombFuse == true)
-									{
-										system("CLS");
-										cout << "The Bomb Blows Up...we're all dead Jim....GAME OVER!\n";
-										cout << " \n";
-										cout << " \n";
-										cout << "\tThank you for playing!\n\n";
-										cout << "\tLook at my WISE WIZARD MUAHAHAHA\n\n";
-										cout << "\t\t        /|     \n";
-										cout << "\t\t       / \\    \n";
-										cout << "\t\t      /   \\   \n";
-										cout << "\t\t \\____\____/____|\n";
-										cout << "\t\t   {|<*> <*>|} \n";
-										cout << "\t\t    |  (-)  |   (&)\n";
-										cout << "\t\t    /\\__1__/|   //\n";
-										cout << "\t\t   | '8-8-8' | //\n";
-										cout << "\t\t   |  '8-8'  | / \n";
-										cout << "\t\t   |   '8'   | \n";
-										cout << "\t\t   |    ?    | \n";
-										cout << "\n";
-										cout << "\n";
-										cout << "\n";
-									}
-								}
-							}
-							else
-							{
-								cout << "Wrong Code...\n";
-								bombFuse = true;
-								if (bombFuse == true)
-								{
-									system("CLS");
-									cout << "The Bomb Blows Up...we're all dead Jim....GAME OVER!\n";
-									cout << " \n";
-									cout << " \n";
-									cout << "\tThank you for playing!\n\n";
-									cout << "\tLook at my WISE WIZARD MUAHAHAHA\n\n";
-									cout << "\t\t        /|     \n";
-									cout << "\t\t       / \\    \n";
-									cout << "\t\t      /   \\   \n";
-									cout << "\t\t \\____\____/____|\n";
-									cout << "\t\t   {|<*> <*>|} \n";
-									cout << "\t\t    |  (-)  |   (&)\n";
-									cout << "\t\t    /\\__1__/|   //\n";
-									cout << "\t\t   | '8-8-8' | //\n";
-									cout << "\t\t   |  '8-8'  | / \n";
-									cout << "\t\t   |   '8'   | \n";
-									cout << "\t\t   |    ?    | \n";
-									cout << "\n";
-									cout << "\n";
-									cout << "\n";
-								}
-							}
-						}
-						else
-						{
-							cout << "Wrong Code...\n";
-							bombFuse = true;
-							if (bombFuse == true)
-							{
-								system("CLS");
-								cout << "The Bomb Blows Up...we're all dead Jim....GAME OVER!\n";
-								cout << " \n";
-								cout << " \n";
-								cout << "\tThank you for playing!\n\n";
-								cout << "\tLook at my WISE WIZARD MUAHAHAHA\n\n";
-								cout << "\t\t        /|     \n";
-								cout << "\t\t       / \\    \n";
-								cout << "\t\t      /   \\   \n";
-								cout << "\t\t \\____\____/____|\n";
-								cout << "\t\t   {|<*> <*>|} \n";
-								cout << "\t\t    |  (-)  |   (&)\n";
-								cout << "\t\t    /\\__1__/|   //\n";
-								cout << "\t\t   | '8-8-8' | //\n";
-								cout << "\t\t   |  '8-8'  | / \n";
-								cout << "\t\t   |   '8'   | \n";
-								cout << "\t\t   |    ?    | \n";
-								cout << "\n";
-								cout << "\n";
-								cout << "\n";
-							}
-						}
-					}
-					else
-					{
-						cout << "Wrong Code...\n";
-						bombFuse = true;
-						if (bombFuse == true)
-						{
-							system("CLS");
-							cout << "The Bomb Blows Up...we're all dead Jim....GAME OVER!\n";
-							cout << " \n";
-							cout << " \n";
-							cout << "\tThank you for playing!\n\n";
-							cout << "\tLook at my WISE WIZARD MUAHAHAHA\n\n";
-							cout << "\t\t        /|     \n";
-							cout << "\t\t       / \\    \n";
-							cout << "\t\t      /   \\   \n";
-							cout << "\t\t \\____\____/____|\n";
-							cout << "\t\t   {|<*> <*>|} \n";
-							cout << "\t\t    |  (-)  |   (&)\n";
-							cout << "\t\t    /\\__1__/|   //\n";
-							cout << "\t\t   | '8-8-8' | //\n";
-							cout << "\t\t   |  '8-8'  | / \n";
-							cout << "\t\t   |   '8'   | \n";
-							cout << "\t\t   |    ?    | \n";
-							cout << "\n";
-							cout << "\n";
-							cout << "\n";
-						}
-					}
-				}
-				else
-				{
-					cout << "That is not a valid option.";
-					cout << "Would you like to enter the code? (Y/N)\n";
-					cin >> enter;
-				}
-			} while (enter == 'Y' && enter != 'N');
-		}
-		else
-		{
-			++turnsTaken;
-		}
-	}
-	else if (currentLocation == 5)
 	{
 		cout << locationDescriptions[1][1];
 		if (hasClue1 == true)
@@ -1226,7 +947,7 @@ void Map::Look()
 		{
 			cout << "There are no clues here...\n";
 		}
-		if (hasBomb5 == true)
+		if (hasBomb4 = true)
 		{
 			cout << "The Bomb Is In This Room!\n";
 			cout << "Would you like to enter the code? (Y/N)\n";
@@ -1237,7 +958,7 @@ void Map::Look()
 				{
 					if (inventory.playerInventory[0] = firstClue)
 					{
-						enterCode1 == firstClue;
+						enterCode1 = firstClue;
 					}
 					else
 					{
@@ -1248,7 +969,7 @@ void Map::Look()
 						cout << "First code approved. Enter the next code. \n";
 						if (inventory.playerInventory[2] = secondClue)
 						{
-							enterCode2 == secondClue;
+							enterCode2 = secondClue;
 						}
 						else
 						{
@@ -1259,235 +980,7 @@ void Map::Look()
 							cout << "Second code approved. Enter the next code. \n";
 							if (inventory.playerInventory[2] = thirdClue)
 							{
-								enterCode3 == thirdClue;
-							}
-							else
-							{
-								cin >> enterCode3;
-							}
-							if (enterCode3 == thirdClue)
-							{
-								cout << "Third code approved. Enter the next code. \n";
-								if (inventory.playerInventory[3] = thirdClue)
-								{
-									enterCode3 == fourthClue;
-								}
-								else
-								{
-									cin >> enterCode3;
-								}
-								if (enterCode4 == fourthClue)
-								{
-									cout << "Bomb Defused. You Did It! Breathe it in, you saved the city!\n";
-									cout << " \n";
-									cout << " \n";
-									cout << "\tThank you for playing!\n\n";
-									cout << "\tLook at my WISE WIZARD MUAHAHAHA\n\n";
-									cout << "\t\t        /|     \n";
-									cout << "\t\t       / \\    \n";
-									cout << "\t\t      /   \\   \n";
-									cout << "\t\t \\____\____/____|\n";
-									cout << "\t\t   {|<*> <*>|} \n";
-									cout << "\t\t    |  (-)  |   (&)\n";
-									cout << "\t\t    /\\__1__/|   //\n";
-									cout << "\t\t   | '8-8-8' | //\n";
-									cout << "\t\t   |  '8-8'  | / \n";
-									cout << "\t\t   |   '8'   | \n";
-									cout << "\t\t   |    ?    | \n";
-									cout << "\n";
-									cout << "\n";
-									cout << "\n";
-								}
-								else
-								{
-									cout << "Wrong Code...\n";
-									bombFuse = true;
-									if (bombFuse == true)
-									{
-										system("CLS");
-										cout << "The Bomb Blows Up...we're all dead Jim....GAME OVER!\n";
-										cout << " \n";
-										cout << " \n";
-										cout << "\tThank you for playing!\n\n";
-										cout << "\tLook at my WISE WIZARD MUAHAHAHA\n\n";
-										cout << "\t\t        /|     \n";
-										cout << "\t\t       / \\    \n";
-										cout << "\t\t      /   \\   \n";
-										cout << "\t\t \\____\____/____|\n";
-										cout << "\t\t   {|<*> <*>|} \n";
-										cout << "\t\t    |  (-)  |   (&)\n";
-										cout << "\t\t    /\\__1__/|   //\n";
-										cout << "\t\t   | '8-8-8' | //\n";
-										cout << "\t\t   |  '8-8'  | / \n";
-										cout << "\t\t   |   '8'   | \n";
-										cout << "\t\t   |    ?    | \n";
-										cout << "\n";
-										cout << "\n";
-										cout << "\n";
-									}
-								}
-							}
-							else
-							{
-								cout << "Wrong Code...\n";
-								bombFuse = true;
-								if (bombFuse == true)
-								{
-									system("CLS");
-									cout << "The Bomb Blows Up...we're all dead Jim....GAME OVER!\n";
-									cout << " \n";
-									cout << " \n";
-									cout << "\tThank you for playing!\n\n";
-									cout << "\tLook at my WISE WIZARD MUAHAHAHA\n\n";
-									cout << "\t\t        /|     \n";
-									cout << "\t\t       / \\    \n";
-									cout << "\t\t      /   \\   \n";
-									cout << "\t\t \\____\____/____|\n";
-									cout << "\t\t   {|<*> <*>|} \n";
-									cout << "\t\t    |  (-)  |   (&)\n";
-									cout << "\t\t    /\\__1__/|   //\n";
-									cout << "\t\t   | '8-8-8' | //\n";
-									cout << "\t\t   |  '8-8'  | / \n";
-									cout << "\t\t   |   '8'   | \n";
-									cout << "\t\t   |    ?    | \n";
-									cout << "\n";
-									cout << "\n";
-									cout << "\n";
-								}
-							}
-						}
-						else
-						{
-							cout << "Wrong Code...\n";
-							bombFuse = true;
-							if (bombFuse == true)
-							{
-								system("CLS");
-								cout << "The Bomb Blows Up...we're all dead Jim....GAME OVER!\n";
-								cout << " \n";
-								cout << " \n";
-								cout << "\tThank you for playing!\n\n";
-								cout << "\tLook at my WISE WIZARD MUAHAHAHA\n\n";
-								cout << "\t\t        /|     \n";
-								cout << "\t\t       / \\    \n";
-								cout << "\t\t      /   \\   \n";
-								cout << "\t\t \\____\____/____|\n";
-								cout << "\t\t   {|<*> <*>|} \n";
-								cout << "\t\t    |  (-)  |   (&)\n";
-								cout << "\t\t    /\\__1__/|   //\n";
-								cout << "\t\t   | '8-8-8' | //\n";
-								cout << "\t\t   |  '8-8'  | / \n";
-								cout << "\t\t   |   '8'   | \n";
-								cout << "\t\t   |    ?    | \n";
-								cout << "\n";
-								cout << "\n";
-								cout << "\n";
-							}
-						}
-					}
-					else
-					{
-						cout << "Wrong Code...\n";
-						bombFuse = true;
-						if (bombFuse == true)
-						{
-							system("CLS");
-							cout << "The Bomb Blows Up...we're all dead Jim....GAME OVER!\n";
-							cout << " \n";
-							cout << " \n";
-							cout << "\tThank you for playing!\n\n";
-							cout << "\tLook at my WISE WIZARD MUAHAHAHA\n\n";
-							cout << "\t\t        /|     \n";
-							cout << "\t\t       / \\    \n";
-							cout << "\t\t      /   \\   \n";
-							cout << "\t\t \\____\____/____|\n";
-							cout << "\t\t   {|<*> <*>|} \n";
-							cout << "\t\t    |  (-)  |   (&)\n";
-							cout << "\t\t    /\\__1__/|   //\n";
-							cout << "\t\t   | '8-8-8' | //\n";
-							cout << "\t\t   |  '8-8'  | / \n";
-							cout << "\t\t   |   '8'   | \n";
-							cout << "\t\t   |    ?    | \n";
-							cout << "\n";
-							cout << "\n";
-							cout << "\n";
-						}
-					}
-				else
-				{
-					cout << "That is not a valid option.";
-					cout << "Would you like to enter the code? (Y/N)\n";
-					cin >> enter;
-				}
-			} while (enter == 'Y' || enter == 'y' && enter != 'N' || enter != 'n');
-		}
-		else
-		{
-			++turnsTaken;
-		}
-	}
-	else
-	{
-		cout << locationDescriptions[1][2];
-		if (hasClue1 == true)
-		{
-			cout << "You found the first of 4 clues!" << firstClue << endl;
-			inventory.playerInventory[0] = firstClue;
-		}
-		else if (hasClue2 == true)
-		{
-			cout << "You found the second of 4 clues!" << secondClue << endl;
-			inventory.playerInventory[1] = secondClue;
-
-		}
-		else if (hasClue3 == true)
-		{
-			cout << "You found the third of 4 clues!" << thirdClue << endl;
-			inventory.playerInventory[2] = thirdClue;
-		}
-		else if (hasClue4 == true)
-		{
-			cout << "You found the fourth of 4 clues!" << fourthClue << endl;
-			inventory.playerInventory[3] = fourthClue;
-		}
-		else
-		{
-			cout << "There are no clues here...\n";
-		}
-		if (hasBomb6 == true)
-		{
-			cout << "The Bomb Is In This Room!\n";
-			cout << "Would you like to enter the code? (Y/N)\n";
-			cin >> enter;
-			do
-			{
-				if (enter == 'Y' && enter != 'N')
-				{
-					if (inventory.playerInventory[0] = firstClue)
-					{
-						enterCode1 == firstClue;
-					}
-					else
-					{
-						cin >> enterCode1;
-					}
-					if (enterCode1 == firstClue)
-					{
-						cout << "First code approved. Enter the next code. \n";
-						if (inventory.playerInventory[2] = secondClue)
-						{
-							enterCode2 == secondClue;
-						}
-						else
-						{
-							cin >> enterCode2;
-						}
-						if (enterCode2 == secondClue)
-						{
-							cout << "Second code approved. Enter the next code. \n";
-							if (inventory.playerInventory[2] = thirdClue)
-							{
-								enterCode3 == thirdClue;
+								enterCode3 = thirdClue;
 							}
 							else
 							{
@@ -1498,7 +991,7 @@ void Map::Look()
 								cout << "Third code approved. Enter the next code. \n";
 								if (inventory.playerInventory[3] = fourthClue)
 								{
-									enterCode4 == fourthClue;
+									enterCode4 = fourthClue;
 								}
 								else
 								{
@@ -1529,38 +1022,6 @@ void Map::Look()
 								else
 								{
 									cout << "Wrong Code...\n";
-									bombFuse = true;
-									if (bombFuse == true)
-									{
-										system("CLS");
-										cout << "The Bomb Blows Up...we're all dead Jim....GAME OVER!\n";
-										cout << " \n";
-										cout << " \n";
-										cout << "\tThank you for playing!\n\n";
-										cout << "\tLook at my WISE WIZARD MUAHAHAHA\n\n";
-										cout << "\t\t        /|     \n";
-										cout << "\t\t       / \\    \n";
-										cout << "\t\t      /   \\   \n";
-										cout << "\t\t \\____\____/____|\n";
-										cout << "\t\t   {|<*> <*>|} \n";
-										cout << "\t\t    |  (-)  |   (&)\n";
-										cout << "\t\t    /\\__1__/|   //\n";
-										cout << "\t\t   | '8-8-8' | //\n";
-										cout << "\t\t   |  '8-8'  | / \n";
-										cout << "\t\t   |   '8'   | \n";
-										cout << "\t\t   |    ?    | \n";
-										cout << "\n";
-										cout << "\n";
-										cout << "\n";
-									}
-								}
-							}
-							else
-							{
-								cout << "Wrong Code...\n";
-								bombFuse = true;
-								if (bombFuse == true)
-								{
 									system("CLS");
 									cout << "The Bomb Blows Up...we're all dead Jim....GAME OVER!\n";
 									cout << " \n";
@@ -1583,13 +1044,9 @@ void Map::Look()
 									cout << "\n";
 								}
 							}
-						}
-						else
-						{
-							cout << "Wrong Code...\n";
-							bombFuse = true;
-							if (bombFuse == true)
+							else
 							{
+								cout << "Wrong Code...\n";
 								system("CLS");
 								cout << "The Bomb Blows Up...we're all dead Jim....GAME OVER!\n";
 								cout << " \n";
@@ -1612,13 +1069,9 @@ void Map::Look()
 								cout << "\n";
 							}
 						}
-					}
-					else
-					{
-						cout << "Wrong Code...\n";
-						bombFuse = true;
-						if (bombFuse == true)
+						else
 						{
+							cout << "Wrong Code...\n";
 							system("CLS");
 							cout << "The Bomb Blows Up...we're all dead Jim....GAME OVER!\n";
 							cout << " \n";
@@ -1639,15 +1092,247 @@ void Map::Look()
 							cout << "\n";
 							cout << "\n";
 							cout << "\n";
-							
 						}
 					}
+					else
+					{
+						cout << "Wrong Code...\n";
+						system("CLS");
+						cout << "The Bomb Blows Up...we're all dead Jim....GAME OVER!\n";
+						cout << " \n";
+						cout << " \n";
+						cout << "\tThank you for playing!\n\n";
+						cout << "\tLook at my WISE WIZARD MUAHAHAHA\n\n";
+						cout << "\t\t        /|     \n";
+						cout << "\t\t       / \\    \n";
+						cout << "\t\t      /   \\   \n";
+						cout << "\t\t \\____\____/____|\n";
+						cout << "\t\t   {|<*> <*>|} \n";
+						cout << "\t\t    |  (-)  |   (&)\n";
+						cout << "\t\t    /\\__1__/|   //\n";
+						cout << "\t\t   | '8-8-8' | //\n";
+						cout << "\t\t   |  '8-8'  | / \n";
+						cout << "\t\t   |   '8'   | \n";
+						cout << "\t\t   |    ?    | \n";
+						cout << "\n";
+						cout << "\n";
+						cout << "\n";
+					}
+				}
 				else
 				{
 					cout << "That is not a valid option.";
 					cout << "Would you like to enter the code? (Y/N)\n";
 					cin >> enter;
 				}
+			} while (enter == 'Y' && enter != 'N');
+		}
+		else if (currentLocation == 5)
+		{
+			cout << locationDescriptions[1][2];
+			if (hasClue1 == true)
+			{
+				cout << "You found the first of 4 clues!" << firstClue << endl;
+				inventory.playerInventory[0] = firstClue;
+			}
+			else if (hasClue2 == true)
+			{
+				cout << "You found the second of 4 clues!" << secondClue << endl;
+				inventory.playerInventory[1] = secondClue;
+
+			}
+			else if (hasClue3 == true)
+			{
+				cout << "You found the third of 4 clues!" << thirdClue << endl;
+				inventory.playerInventory[2] = thirdClue;
+			}
+			else if (hasClue4 == true)
+			{
+				cout << "You found the fourth of 4 clues!" << fourthClue << endl;
+				inventory.playerInventory[3] = fourthClue;
+			}
+			else
+			{
+				cout << "There are no clues here...\n";
+			}
+			if (hasBomb5 = true)
+			{
+				cout << "The Bomb Is In This Room!\n";
+				cout << "Would you like to enter the code? (Y/N)\n";
+				cin >> enter;
+				do
+				{
+					if (enter == 'Y' && enter != 'N')
+					{
+						if (inventory.playerInventory[0] = firstClue)
+						{
+							enterCode1 = firstClue;
+						}
+						else
+						{
+							cin >> enterCode1;
+						}
+						if (enterCode1 == firstClue)
+						{
+							cout << "First code approved. Enter the next code. \n";
+							if (inventory.playerInventory[2] = secondClue)
+							{
+								enterCode2 = secondClue;
+							}
+							else
+							{
+								cin >> enterCode2;
+							}
+							if (enterCode2 == secondClue)
+							{
+								cout << "Second code approved. Enter the next code. \n";
+								if (inventory.playerInventory[2] = thirdClue)
+								{
+									enterCode3 = thirdClue;
+								}
+								else
+								{
+									cin >> enterCode3;
+								}
+								if (enterCode3 == thirdClue)
+								{
+									cout << "Third code approved. Enter the next code. \n";
+									if (inventory.playerInventory[3] = fourthClue)
+									{
+										enterCode4 = fourthClue;
+									}
+									else
+									{
+										cin >> enterCode4;
+									}
+									if (enterCode4 == fourthClue)
+									{
+										cout << "Bomb Defused. You Did It! Breathe it in, you saved the city!\n";
+										cout << " \n";
+										cout << " \n";
+										cout << "\tThank you for playing!\n\n";
+										cout << "\tLook at my WISE WIZARD MUAHAHAHA\n\n";
+										cout << "\t\t        /|     \n";
+										cout << "\t\t       / \\    \n";
+										cout << "\t\t      /   \\   \n";
+										cout << "\t\t \\____\____/____|\n";
+										cout << "\t\t   {|<*> <*>|} \n";
+										cout << "\t\t    |  (-)  |   (&)\n";
+										cout << "\t\t    /\\__1__/|   //\n";
+										cout << "\t\t   | '8-8-8' | //\n";
+										cout << "\t\t   |  '8-8'  | / \n";
+										cout << "\t\t   |   '8'   | \n";
+										cout << "\t\t   |    ?    | \n";
+										cout << "\n";
+										cout << "\n";
+										cout << "\n";
+									}
+									else
+									{
+										cout << "Wrong Code...\n";
+										system("CLS");
+										cout << "The Bomb Blows Up...we're all dead Jim....GAME OVER!\n";
+										cout << " \n";
+										cout << " \n";
+										cout << "\tThank you for playing!\n\n";
+										cout << "\tLook at my WISE WIZARD MUAHAHAHA\n\n";
+										cout << "\t\t        /|     \n";
+										cout << "\t\t       / \\    \n";
+										cout << "\t\t      /   \\   \n";
+										cout << "\t\t \\____\____/____|\n";
+										cout << "\t\t   {|<*> <*>|} \n";
+										cout << "\t\t    |  (-)  |   (&)\n";
+										cout << "\t\t    /\\__1__/|   //\n";
+										cout << "\t\t   | '8-8-8' | //\n";
+										cout << "\t\t   |  '8-8'  | / \n";
+										cout << "\t\t   |   '8'   | \n";
+										cout << "\t\t   |    ?    | \n";
+										cout << "\n";
+										cout << "\n";
+										cout << "\n";
+									}
+								}
+								else
+								{
+									cout << "Wrong Code...\n";
+									system("CLS");
+									cout << "The Bomb Blows Up...we're all dead Jim....GAME OVER!\n";
+									cout << " \n";
+									cout << " \n";
+									cout << "\tThank you for playing!\n\n";
+									cout << "\tLook at my WISE WIZARD MUAHAHAHA\n\n";
+									cout << "\t\t        /|     \n";
+									cout << "\t\t       / \\    \n";
+									cout << "\t\t      /   \\   \n";
+									cout << "\t\t \\____\____/____|\n";
+									cout << "\t\t   {|<*> <*>|} \n";
+									cout << "\t\t    |  (-)  |   (&)\n";
+									cout << "\t\t    /\\__1__/|   //\n";
+									cout << "\t\t   | '8-8-8' | //\n";
+									cout << "\t\t   |  '8-8'  | / \n";
+									cout << "\t\t   |   '8'   | \n";
+									cout << "\t\t   |    ?    | \n";
+									cout << "\n";
+									cout << "\n";
+									cout << "\n";
+								}
+							}
+							else
+							{
+								cout << "Wrong Code...\n";
+								system("CLS");
+								cout << "The Bomb Blows Up...we're all dead Jim....GAME OVER!\n";
+								cout << " \n";
+								cout << " \n";
+								cout << "\tThank you for playing!\n\n";
+								cout << "\tLook at my WISE WIZARD MUAHAHAHA\n\n";
+								cout << "\t\t        /|     \n";
+								cout << "\t\t       / \\    \n";
+								cout << "\t\t      /   \\   \n";
+								cout << "\t\t \\____\____/____|\n";
+								cout << "\t\t   {|<*> <*>|} \n";
+								cout << "\t\t    |  (-)  |   (&)\n";
+								cout << "\t\t    /\\__1__/|   //\n";
+								cout << "\t\t   | '8-8-8' | //\n";
+								cout << "\t\t   |  '8-8'  | / \n";
+								cout << "\t\t   |   '8'   | \n";
+								cout << "\t\t   |    ?    | \n";
+								cout << "\n";
+								cout << "\n";
+								cout << "\n";
+							}
+						}
+						else
+						{
+							cout << "Wrong Code...\n";
+							system("CLS");
+							cout << "The Bomb Blows Up...we're all dead Jim....GAME OVER!\n";
+							cout << " \n";
+							cout << " \n";
+							cout << "\tThank you for playing!\n\n";
+							cout << "\tLook at my WISE WIZARD MUAHAHAHA\n\n";
+							cout << "\t\t        /|     \n";
+							cout << "\t\t       / \\    \n";
+							cout << "\t\t      /   \\   \n";
+							cout << "\t\t \\____\____/____|\n";
+							cout << "\t\t   {|<*> <*>|} \n";
+							cout << "\t\t    |  (-)  |   (&)\n";
+							cout << "\t\t    /\\__1__/|   //\n";
+							cout << "\t\t   | '8-8-8' | //\n";
+							cout << "\t\t   |  '8-8'  | / \n";
+							cout << "\t\t   |   '8'   | \n";
+							cout << "\t\t   |    ?    | \n";
+							cout << "\n";
+							cout << "\n";
+							cout << "\n";
+						}
+					}
+					else
+					{
+						cout << "That is not a valid option.";
+						cout << "Would you like to enter the code? (Y/N)\n";
+						cin >> enter;
+					}
 				} while (enter == 'Y' && enter != 'N');
 			}
 			else
@@ -1657,4 +1342,3 @@ void Map::Look()
 		}
 	}
 }
-

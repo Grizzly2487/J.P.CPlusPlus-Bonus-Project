@@ -4,7 +4,7 @@
 #include "player.h"
 
 using namespace std;
-
+//players inventory for the clues to populate for the bomb to be diffused
 void Player::inventorySearch()
 {
 	cout << playerInventory[0];

@@ -25,8 +25,7 @@ private:
 	bool hasBomb4 = false;
 	bool hasBomb5 = false;
 	bool hasBomb6 = false;
-	bool bombFuse = false;
-	int bombCode;
+	int bombCode[4] = { firstClue,secondClue,thirdClue,fourthClue };
 	int bombLocation;
 
 	bool hasClue1 = false;

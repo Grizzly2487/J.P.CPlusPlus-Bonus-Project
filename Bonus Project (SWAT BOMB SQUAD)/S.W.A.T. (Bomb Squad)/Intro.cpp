@@ -3,6 +3,7 @@
 #include "Intro.h"
 using namespace std;
 
+//intro for the game
 void Intro::introduction()
 {
 	cout << "\n\n";
